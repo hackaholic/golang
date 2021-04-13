@@ -15,7 +15,7 @@ func main() {
 		Inside a function, the := short assignment statement can be used in place of a var declaration with implicit type.
 	*/
 	j := 10
-	println(j)
+	fmt.Println(j)
 
 	/*
 			 Variables declared without an explicit initial value are given their zero value.
