@@ -15,6 +15,6 @@ func test() {
 }
 func main() {
 	defer fmt.Println("Main executed successfully")
-	fmt.Println("World World")
+	fmt.Println("Hello World")
 	test()
 }

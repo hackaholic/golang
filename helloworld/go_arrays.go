@@ -8,6 +8,7 @@ func main() {
 	/*
 			Arrays
 		    The type [n]T is an array of n values of type T.
+
 	*/
 	var arr = [2]string{"Hello", "world"}
 	fmt.Println(arr)
@@ -27,8 +28,11 @@ func main() {
 	// array slices array[low:high] , high will be excluded
 	// A slice does not store any data, it just describes a section of an underlying array.
 	// Changing the elements of a slice modifies the corresponding elements of its underlying array.
+	// The zero value of a slice is nil. arr []int, here arr==nil
 	fmt.Println("arr_n[1:5] ->", arr_n[1:5])
 	fmt.Println("arr_n[4:]", arr_n[4:])
+	fmt.Println("arr_n[cap(arr_n):] ->", arr_n[cap(arr_n):], "arr_n[len(arr_n):] ->", arr_n[len(arr_n):])
+	// empty slice [] and nil are different
 
 	// looping over arry using range
 	// When ranging over a slice, two values are returned for each iteration.
