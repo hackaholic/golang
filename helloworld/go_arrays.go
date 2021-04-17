@@ -37,8 +37,9 @@ func main() {
 	// looping over arry using range
 	// When ranging over a slice, two values are returned for each iteration.
 	// The first is the index, and the second is a copy of the element at that index.
-	fmt.Println("Looping over array arr_pet")
+
 	var arr_pet = []string{"coco", "Dora", "Mini", "Oreo", "Nova"}
+	fmt.Println("Looping over array arr_pet ->", arr_pet)
 	for i, v := range arr_pet {
 		fmt.Println(i, v)
 	}
