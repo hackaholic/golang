@@ -27,7 +27,7 @@ func main() {
 
 	dict := make(map[int]Pet)
 
-	dict[1] = Pet{"Codo", 2}
+	dict[1] = Pet{"Coco", 2}
 	dict[2] = Pet{"Mini", 3}
 	dict[3] = Pet{"Dora", 2.5}
 	dict[4] = Pet{"Oreo", 2.8}
@@ -36,7 +36,7 @@ func main() {
 
 	// Map literals are like struct literals, but the keys are required.
 	dict_data := map[int]Pet{
-		1: Pet{"Codo", 2},
+		1: Pet{"Coco", 2},
 		2: Pet{"Mini", 3},
 		3: Pet{"Dora", 2.5},
 		4: Pet{"Oreo", 2.8},

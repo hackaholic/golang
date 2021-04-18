@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func add(x int, y int) int {
@@ -26,4 +27,13 @@ func main() {
 	a, b := swap("Hello", "World")
 	println(a, b)
 	println(sum_n(5))
+
+	/* Functions are values too. They can be passed around just like other values.
+	Function values may be used as function arguments and return values.
+	*/
+
+	split_string := func(str, sep string) []string {
+		return strings.Split(str, sep)
+	}
+	fmt.Println(split_string("Hello world I am golang!", " "))
 }
