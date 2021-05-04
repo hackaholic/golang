@@ -42,5 +42,5 @@ func main() {
 	*/
 	const word = "Hello Golang"
 	fmt.Printf(" word of type: %T, value: %s\n", word, word)
-	// word = "Hello World" thsi will fail
+	// word = "Hello World" this will fail
 }
