@@ -75,4 +75,5 @@ func main() {
 	// strings.Map(func(rune) rune, str)
 	println("strings.Map(myToUpper, str):", strings.Map(myToUpper, str))
 	println("strings.Map(unicode.ToTitle, str):", strings.Map(unicode.ToTitle, str))
+
 }

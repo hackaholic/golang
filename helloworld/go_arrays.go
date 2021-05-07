@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -58,4 +59,8 @@ func main() {
 	fmt.Println("Appending Simba to arr_pet")
 	arr_pet = append(arr_pet, "Simba")
 	fmt.Println(arr_pet)
+
+	sort.Strings(arr_pet)
+	fmt.Println("Sorted arr_pet:", arr_pet)
+
 }
