@@ -39,6 +39,7 @@ func main() {
 
 	fmt.Print("Enter a file path to open: ")
 	input_arr := make([]byte, 100)
+	var filename string
 	for {
 		n, err := io.ReadAtLeast(os.Stdin, input_arr, 1)
 		if err != nil && err != io.EOF {
@@ -47,21 +48,25 @@ func main() {
 		//fmt.Print(input_arr[:n])
 		//fmt.Printf("%s", input_arr[:n])
 		// \n -> 10
+		fmt.Println("No of Bytes read:", n)
 		if input_arr[n-1] == 10 {
 			fmt.Println("\nEncountered \\n ")
+			filename = string(input_arr[:n-1])
+			fmt.Println(filename)
 			break
 		}
 	}
 
 	//file_name := string(input_arr)
-	file_name := "/tmp/hello.txt"
-	fmt.Printf("%T, %s\n", file_name, file_name)
+	//file_name := "/tmp/hello.txt"
+	fmt.Printf("%T, %q\n", input_arr, input_arr) // %q quoted
+	fmt.Printf("filename: %s", filename)
 	// only readonly mode -> os.Open(filename string) -> *os.File, err
 	//os.OpenFile(name string, flag int, perm os.FileMode) -> *os.File, err
 	// flags -> os.O_RDONLY, os.O_CREATE, os.O_TRUNC etc...
-	f, err := os.Open(file_name)
+	f, err := os.Open(filename)
 	defer func() {
-		fmt.Println("closing file", file_name)
+		fmt.Println("closing file", filename)
 		f.Close()
 	}()
 	fmt.Println(f, err)
