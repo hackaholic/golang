@@ -29,7 +29,7 @@ func main() {
 	var str string // ""
 	var flag bool  // false
 	fmt.Println("Variables declared without an explicit initial value are given their zero value.")
-	fmt.Printf("k -> %d, str -> %s, flag -> %b\n", k, str, flag)
+	fmt.Printf("k -> %d, str -> %s, flag -> %t\n", k, str, flag)
 
 	// type conversion T(v)
 	n := float64(i)
